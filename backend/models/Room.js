@@ -18,6 +18,14 @@ const Room = sequelize.define('Room', {
     type: DataTypes.STRING,
     allowNull: false,
   },
+  propertyType: {
+    type: DataTypes.STRING,
+    defaultValue: 'Apartment',
+  },
+  isAvailable: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: true,
+  },
   imageUrl: {
     type: DataTypes.STRING,
   },

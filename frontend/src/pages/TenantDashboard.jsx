@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useAuth } from '../context/AuthContext';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
+import { Calendar, Home, History, Clock, CheckCircle, XCircle } from 'lucide-react';
 
 const TenantDashboard = () => {
   const [bookings, setBookings] = useState([]);
-  const { token, logout } = useAuth();
+  const { token, user } = useAuth();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -22,47 +23,89 @@ const TenantDashboard = () => {
     fetchBookings();
   }, [token]);
 
-  return (
-    <div className="p-8">
-      <div className="flex justify-between items-center mb-8">
-        <h2 className="text-3xl font-bold">Tenant Dashboard</h2>
-        <div>
-          <button onClick={() => navigate('/rooms')} className="mr-4 bg-blue-500 text-white px-4 py-2 rounded">Browse Rooms</button>
-          <button onClick={logout} className="bg-red-500 text-white px-4 py-2 rounded">Logout</button>
-        </div>
-      </div>
+  const getStatusStyle = (status) => {
+    switch (status) {
+      case 'confirmed': return 'bg-green-100 text-green-700 border-green-200';
+      case 'cancelled': return 'bg-red-100 text-red-700 border-red-200';
+      default: return 'bg-yellow-100 text-yellow-700 border-yellow-200';
+    }
+  };
 
-      <h3 className="text-2xl font-bold mb-4">My Bookings</h3>
-      <div className="bg-white rounded shadow overflow-hidden">
-        <table className="min-w-full">
-          <thead className="bg-gray-50">
-            <tr>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Room</th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Dates</th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-gray-200">
-            {bookings.map(booking => (
-              <tr key={booking.id}>
-                <td className="px-6 py-4 whitespace-nowrap">{booking.room?.title}</td>
-                <td className="px-6 py-4 whitespace-nowrap">{new Date(booking.startDate).toLocaleDateString()} - {new Date(booking.endDate).toLocaleDateString()}</td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${
-                    booking.status === 'confirmed' ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'
-                  }`}>
-                    {booking.status}
-                  </span>
-                </td>
-              </tr>
-            ))}
-            {bookings.length === 0 && (
-                <tr>
-                    <td colSpan="3" className="px-6 py-4 text-center text-gray-500">No bookings found</td>
-                </tr>
-            )}
-          </tbody>
-        </table>
+  const getStatusIcon = (status) => {
+    switch (status) {
+      case 'confirmed': return <CheckCircle className="w-4 h-4 mr-1" />;
+      case 'cancelled': return <XCircle className="w-4 h-4 mr-1" />;
+      default: return <Clock className="w-4 h-4 mr-1" />;
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-gray-50 py-10 px-4">
+      <div className="max-w-6xl mx-auto">
+        <header className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-4">
+          <div>
+            <h1 className="text-3xl font-extrabold text-gray-900">Tenant Dashboard</h1>
+            <p className="text-gray-500 mt-1">Welcome back, <span className="font-semibold text-blue-600">{user?.username}</span>!</p>
+          </div>
+          <Link
+            to="/rooms"
+            className="bg-blue-600 text-white px-6 py-2 rounded-xl font-bold hover:bg-blue-700 transition shadow-md flex items-center"
+          >
+            <Home className="w-4 h-4 mr-2" /> Browse More Rooms
+          </Link>
+        </header>
+
+        <div className="grid grid-cols-1 gap-8">
+          <section>
+            <div className="flex items-center mb-6">
+              <History className="w-6 h-6 mr-2 text-blue-600" />
+              <h2 className="text-2xl font-bold text-gray-800">My Booking History</h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {bookings.map(booking => (
+                <div key={booking.id} className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition">
+                  <div className="p-6">
+                    <div className="flex justify-between items-start mb-4">
+                      <h3 className="text-xl font-bold text-gray-900 leading-tight">{booking.room?.title}</h3>
+                      <span className={`px-3 py-1 rounded-full text-xs font-bold flex items-center border ${getStatusStyle(booking.status)}`}>
+                        {getStatusIcon(booking.status)} {booking.status}
+                      </span>
+                    </div>
+
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center text-gray-600 text-sm">
+                        <Calendar className="w-4 h-4 mr-2 text-gray-400" />
+                        <span>{new Date(booking.startDate).toLocaleDateString()} — {new Date(booking.endDate).toLocaleDateString()}</span>
+                      </div>
+                      <div className="text-sm text-gray-500">
+                        Price: <span className="font-semibold text-gray-900">${booking.room?.price}/mo</span>
+                      </div>
+                    </div>
+
+                    <Link
+                      to={`/rooms/${booking.roomId}`}
+                      className="block w-full text-center py-2 border border-gray-200 rounded-lg text-sm font-bold text-gray-600 hover:bg-gray-50 transition"
+                    >
+                      View Property details
+                    </Link>
+                  </div>
+                </div>
+              ))}
+
+              {bookings.length === 0 && (
+                <div className="col-span-full bg-white p-12 rounded-2xl border-2 border-dashed border-gray-200 text-center">
+                  <div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Calendar className="w-8 h-8 text-gray-300" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">No bookings yet</h3>
+                  <p className="text-gray-500 mb-6">You haven't requested any rentals. Start browsing to find your next home!</p>
+                  <Link to="/rooms" className="text-blue-600 font-bold hover:underline">Start Browsing</Link>
+                </div>
+              )}
+            </div>
+          </section>
+        </div>
       </div>
     </div>
   );
