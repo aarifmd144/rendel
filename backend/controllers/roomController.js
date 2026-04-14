@@ -3,12 +3,14 @@ const User = require('../models/User');
 
 exports.createRoom = async (req, res) => {
   try {
-    const { title, description, price, location, imageUrl } = req.body;
+    const { title, description, price, location, propertyType, isAvailable, imageUrl } = req.body;
     const room = await Room.create({
       title,
       description,
       price,
       location,
+      propertyType,
+      isAvailable,
       imageUrl,
       ownerId: req.user.id,
     });
@@ -20,7 +22,14 @@ exports.createRoom = async (req, res) => {
 
 exports.getRooms = async (req, res) => {
   try {
-    const rooms = await Room.findAll({ include: [{ model: User, as: 'owner', attributes: ['username'] }] });
+    const where = {};
+    if (req.query.ownerId) {
+      where.ownerId = req.query.ownerId;
+    }
+    const rooms = await Room.findAll({
+      where,
+      include: [{ model: User, as: 'owner', attributes: ['username'] }]
+    });
     res.json(rooms);
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -47,8 +56,8 @@ exports.updateRoom = async (req, res) => {
       return res.status(403).json({ error: 'Forbidden' });
     }
 
-    const { title, description, price, location, imageUrl } = req.body;
-    await room.update({ title, description, price, location, imageUrl });
+    const { title, description, price, location, propertyType, isAvailable, imageUrl } = req.body;
+    await room.update({ title, description, price, location, propertyType, isAvailable, imageUrl });
     res.json(room);
   } catch (error) {
     res.status(400).json({ error: error.message });
