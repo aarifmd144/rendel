@@ -21,6 +21,14 @@ const Room = sequelize.define('Room', {
   imageUrl: {
     type: DataTypes.STRING,
   },
+  propertyType: {
+    type: DataTypes.STRING,
+    defaultValue: 'Apartment',
+  },
+  isAvailable: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: true,
+  },
 });
 
 Room.belongsTo(User, { as: 'owner', foreignKey: 'ownerId' });
