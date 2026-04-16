@@ -1,0 +1,616 @@
+
+> rental-house-system@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.3 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.2:3000
+- Environments: .env
+✓ Ready in 598ms
+
+○ Compiling / ...
+⨯ Error [PrismaClientKnownRequestError]:
+Invalid `{imported module ./src/lib/prisma.ts}["prisma"].house.findMany()` invocation in
+/app/.next/dev/server/chunks/ssr/[root-of-the-server]__0vl2d~5._.js:81:159
+
+  78 ;
+  79 const dynamic = 'force-dynamic';
+  80 async function Home() {
+→ 81     const houses = await {imported module ./src/lib/prisma.ts}["prisma"].house.findMany(
+URL_INVALID: The URL 'undefined' is not in a valid format
+    at <unknown> (src/app/page.tsx:7:37)
+    at async Home (src/app/page.tsx:7:18)
+   5 |
+   6 | export default async function Home() {
+>  7 |   const houses = await prisma.house.findMany({
+     |                                     ^
+   8 |     orderBy: {
+   9 |       createdAt: 'desc'
+  10 |     } {
+  code: 'URL_INVALID',
+  meta: { modelName: 'House' },
+  clientVersion: '7.7.0',
+  digest: '2158631961'
+}
+ GET / 500 in 6.5s (next.js: 5.4s, application-code: 1150ms)
+[browser] Uncaught PrismaClientKnownRequestError:
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].house.findMany()` invocation in
+/app/.next/dev/server/chunks/ssr/[root-of-the-server]__0vl2d~5._.js:81:159
+
+  78 ;
+  79 const dynamic = 'force-dynamic';
+  80 async function Home() {
+→ 81     const houses = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].house.findMany(
+URL_INVALID: The URL 'undefined' is not in a valid format
+    at <unknown> (src/app/page.tsx:7:37)
+    at  Home (src/app/page.tsx:7:18)
+   5 |
+   6 | export default async function Home() {
+>  7 |   const houses = await prisma.house.findMany({
+     |                                     ^
+   8 |     orderBy: {
+   9 |       createdAt: 'desc'
+  10 |     }
+ GET /register 200 in 700ms (next.js: 590ms, application-code: 111ms)
+ GET /login 200 in 1243ms (next.js: 1119ms, application-code: 124ms)
+ GET /api/auth/session 200 in 1488ms
+ GET /api/auth/session 200 in 203ms
+ POST /api/auth/_log 200 in 349ms
+✓ Compiled in 67ms
+⨯ Error [PrismaClientKnownRequestError]:
+Invalid `{imported module ./src/lib/prisma.ts}["prisma"].house.findMany()` invocation in
+/app/.next/dev/server/chunks/ssr/[root-of-the-server]__0vl2d~5._.js:84:159
+
+  81 ;
+  82 const dynamic = 'force-dynamic';
+  83 async function Home() {
+→ 84     const houses = await {imported module ./src/lib/prisma.ts}["prisma"].house.findMany(
+URL_INVALID: The URL 'undefined' is not in a valid format
+    at <unknown> (src/app/page.tsx:7:37)
+    at async Home (src/app/page.tsx:7:18)
+   5 |
+   6 | export default async function Home() {
+>  7 |   const houses = await prisma.house.findMany({
+     |                                     ^
+   8 |     orderBy: {
+   9 |       createdAt: 'desc'
+  10 |     } {
+  code: 'URL_INVALID',
+  meta: { modelName: 'House' },
+  clientVersion: '7.7.0',
+  digest: '3277960124'
+}
+ GET / 500 in 388ms (next.js: 76ms, application-code: 313ms)
+[browser] Uncaught PrismaClientKnownRequestError:
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].house.findMany()` invocation in
+/app/.next/dev/server/chunks/ssr/[root-of-the-server]__0vl2d~5._.js:84:159
+
+  81 ;
+  82 const dynamic = 'force-dynamic';
+  83 async function Home() {
+→ 84     const houses = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].house.findMany(
+URL_INVALID: The URL 'undefined' is not in a valid format
+    at <unknown> (src/app/page.tsx:7:37)
+    at  Home (src/app/page.tsx:7:18)
+   5 |
+   6 | export default async function Home() {
+>  7 |   const houses = await prisma.house.findMany({
+     |                                     ^
+   8 |     orderBy: {
+   9 |       createdAt: 'desc'
+  10 |     }
+ GET /register 200 in 71ms (next.js: 12ms, application-code: 59ms)
+ GET /api/auth/session 200 in 215ms (next.js: 201ms, application-code: 15ms)
+ GET /login 200 in 166ms (next.js: 39ms, application-code: 127ms)
+ GET /api/auth/session 200 in 32ms (next.js: 12ms, application-code: 20ms)
+✓ Compiled in 53ms
+⨯ Error [PrismaClientKnownRequestError]:
+Invalid `{imported module ./src/lib/prisma.ts}["prisma"].house.findMany()` invocation in
+/app/.next/dev/server/chunks/ssr/[root-of-the-server]__0vl2d~5._.js:81:159
+
+  78 ;
+  79 const dynamic = 'force-dynamic';
+  80 async function Home() {
+→ 81     const houses = await {imported module ./src/lib/prisma.ts}["prisma"].house.findMany(
+URL_INVALID: The URL 'undefined' is not in a valid format
+    at <unknown> (src/app/page.tsx:7:37)
+    at async Home (src/app/page.tsx:7:18)
+   5 |
+   6 | export default async function Home() {
+>  7 |   const houses = await prisma.house.findMany({
+     |                                     ^
+   8 |     orderBy: {
+   9 |       createdAt: 'desc'
+  10 |     } {
+  code: 'URL_INVALID',
+  meta: { modelName: 'House' },
+  clientVersion: '7.7.0',
+  digest: '2158631961'
+}
+ GET / 500 in 270ms (next.js: 51ms, application-code: 219ms)
+[browser] Uncaught PrismaClientKnownRequestError:
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].house.findMany()` invocation in
+/app/.next/dev/server/chunks/ssr/[root-of-the-server]__0vl2d~5._.js:81:159
+
+  78 ;
+  79 const dynamic = 'force-dynamic';
+  80 async function Home() {
+→ 81     const houses = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].house.findMany(
+URL_INVALID: The URL 'undefined' is not in a valid format
+    at <unknown> (src/app/page.tsx:7:37)
+    at  Home (src/app/page.tsx:7:18)
+   5 |
+   6 | export default async function Home() {
+>  7 |   const houses = await prisma.house.findMany({
+     |                                     ^
+   8 |     orderBy: {
+   9 |       createdAt: 'desc'
+  10 |     }
+ GET /register 200 in 67ms (next.js: 11ms, application-code: 56ms)
+ GET /api/auth/session 200 in 87ms (next.js: 76ms, application-code: 12ms)
+ GET /login 200 in 148ms (next.js: 11ms, application-code: 137ms)
+ GET /api/auth/session 200 in 24ms (next.js: 8ms, application-code: 16ms)
+⨯ Error [PrismaClientKnownRequestError]:
+Invalid `{imported module ./src/lib/prisma.ts}["prisma"].house.findMany()` invocation in
+/app/.next/dev/server/chunks/ssr/[root-of-the-server]__0vl2d~5._.js:81:159
+
+  78 ;
+  79 const dynamic = 'force-dynamic';
+  80 async function Home() {
+→ 81     const houses = await {imported module ./src/lib/prisma.ts}["prisma"].house.findMany(
+URL_INVALID: The URL 'undefined' is not in a valid format
+    at <unknown> (src/app/page.tsx:7:37)
+    at async Home (src/app/page.tsx:7:18)
+   5 |
+   6 | export default async function Home() {
+>  7 |   const houses = await prisma.house.findMany({
+     |                                     ^
+   8 |     orderBy: {
+   9 |       createdAt: 'desc'
+  10 |     } {
+  code: 'URL_INVALID',
+  meta: { modelName: 'House' },
+  clientVersion: '7.7.0',
+  digest: '2158631961'
+}
+ GET / 500 in 269ms (next.js: 4ms, application-code: 265ms)
+[browser] Uncaught PrismaClientKnownRequestError:
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].house.findMany()` invocation in
+/app/.next/dev/server/chunks/ssr/[root-of-the-server]__0vl2d~5._.js:81:159
+
+  78 ;
+  79 const dynamic = 'force-dynamic';
+  80 async function Home() {
+→ 81     const houses = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].house.findMany(
+URL_INVALID: The URL 'undefined' is not in a valid format
+    at <unknown> (src/app/page.tsx:7:37)
+    at  Home (src/app/page.tsx:7:18)
+   5 |
+   6 | export default async function Home() {
+>  7 |   const houses = await prisma.house.findMany({
+     |                                     ^
+   8 |     orderBy: {
+   9 |       createdAt: 'desc'
+  10 |     }
+ GET /register 200 in 58ms (next.js: 4ms, application-code: 54ms)
+ GET /api/auth/session 200 in 46ms (next.js: 27ms, application-code: 19ms)
+ GET /login 200 in 65ms (next.js: 5ms, application-code: 60ms)
+ GET /api/auth/session 200 in 16ms (next.js: 3ms, application-code: 13ms)
+⨯ Error [PrismaClientKnownRequestError]:
+Invalid `{imported module ./src/lib/prisma.ts}["prisma"].house.findMany()` invocation in
+/app/.next/dev/server/chunks/ssr/[root-of-the-server]__0vl2d~5._.js:81:159
+
+  78 ;
+  79 const dynamic = 'force-dynamic';
+  80 async function Home() {
+→ 81     const houses = await {imported module ./src/lib/prisma.ts}["prisma"].house.findMany(
+URL_INVALID: The URL 'undefined' is not in a valid format
+    at <unknown> (src/app/page.tsx:7:37)
+    at async Home (src/app/page.tsx:7:18)
+   5 |
+   6 | export default async function Home() {
+>  7 |   const houses = await prisma.house.findMany({
+     |                                     ^
+   8 |     orderBy: {
+   9 |       createdAt: 'desc'
+  10 |     } {
+  code: 'URL_INVALID',
+  meta: { modelName: 'House' },
+  clientVersion: '7.7.0',
+  digest: '2158631961'
+}
+ GET / 500 in 187ms (next.js: 3ms, application-code: 184ms)
+[browser] Uncaught PrismaClientKnownRequestError:
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].house.findMany()` invocation in
+/app/.next/dev/server/chunks/ssr/[root-of-the-server]__0vl2d~5._.js:81:159
+
+  78 ;
+  79 const dynamic = 'force-dynamic';
+  80 async function Home() {
+→ 81     const houses = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].house.findMany(
+URL_INVALID: The URL 'undefined' is not in a valid format
+    at <unknown> (src/app/page.tsx:7:37)
+    at  Home (src/app/page.tsx:7:18)
+   5 |
+   6 | export default async function Home() {
+>  7 |   const houses = await prisma.house.findMany({
+     |                                     ^
+   8 |     orderBy: {
+   9 |       createdAt: 'desc'
+  10 |     }
+ GET /register 200 in 64ms (next.js: 3ms, application-code: 61ms)
+ GET /api/auth/session 200 in 34ms (next.js: 24ms, application-code: 10ms)
+ GET /login 200 in 97ms (next.js: 6ms, application-code: 91ms)
+ GET /api/auth/session 200 in 14ms (next.js: 4ms, application-code: 10ms)
+✓ Compiled in 114ms
+⨯ Error [PrismaClientKnownRequestError]:
+Invalid `{imported module ./src/lib/prisma.ts}["prisma"].house.findMany()` invocation in
+/app/.next/dev/server/chunks/ssr/[root-of-the-server]__0vl2d~5._.js:56:159
+
+  53 ;
+  54 const dynamic = 'force-dynamic';
+  55 async function Home() {
+→ 56     const houses = await {imported module ./src/lib/prisma.ts}["prisma"].house.findMany(
+URL_INVALID: The URL 'undefined' is not in a valid format
+    at <unknown> (src/app/page.tsx:7:37)
+    at async Home (src/app/page.tsx:7:18)
+   5 |
+   6 | export default async function Home() {
+>  7 |   const houses = await prisma.house.findMany({
+     |                                     ^
+   8 |     orderBy: {
+   9 |       createdAt: 'desc'
+  10 |     } {
+  code: 'URL_INVALID',
+  meta: { modelName: 'House' },
+  clientVersion: '7.7.0',
+  digest: '4087318195'
+}
+ GET / 500 in 495ms (next.js: 131ms, application-code: 364ms)
+[browser] Uncaught PrismaClientKnownRequestError:
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].house.findMany()` invocation in
+/app/.next/dev/server/chunks/ssr/[root-of-the-server]__0vl2d~5._.js:56:159
+
+  53 ;
+  54 const dynamic = 'force-dynamic';
+  55 async function Home() {
+→ 56     const houses = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].house.findMany(
+URL_INVALID: The URL 'undefined' is not in a valid format
+    at <unknown> (src/app/page.tsx:7:37)
+    at  Home (src/app/page.tsx:7:18)
+   5 |
+   6 | export default async function Home() {
+>  7 |   const houses = await prisma.house.findMany({
+     |                                     ^
+   8 |     orderBy: {
+   9 |       createdAt: 'desc'
+  10 |     }
+ GET /register 200 in 105ms (next.js: 19ms, application-code: 86ms)
+ GET /api/auth/session 200 in 164ms (next.js: 137ms, application-code: 27ms)
+ GET /login 200 in 159ms (next.js: 21ms, application-code: 139ms)
+ GET /api/auth/session 200 in 32ms (next.js: 5ms, application-code: 27ms)
+⨯ Failed to generate static paths for /api/auth/[...nextauth]:
+Error [PrismaClientInitializationError]: `PrismaClient` needs to be constructed with a non-empty, valid `PrismaClientOptions`:
+
+```
+new PrismaClient({
+  ...
+})
+```
+
+or
+
+```
+constructor() {
+  super({ ... });
+}
+```
+
+    at module evaluation (src/lib/prisma.ts:7:3)
+    at module evaluation (src/app/api/auth/[...nextauth]/route.ts:3:1)
+   5 | export const prisma =
+   6 |   globalForPrisma.prisma ||
+>  7 |   new PrismaClient()
+     |   ^
+   8 |
+   9 | if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma
+  10 | {
+  type: 'PrismaClientInitializationError',
+  clientVersion: '7.7.0'
+}
+⨯ Failed to generate static paths for /api/auth/[...nextauth]:
+Error [PrismaClientInitializationError]: `PrismaClient` needs to be constructed with a non-empty, valid `PrismaClientOptions`:
+
+```
+new PrismaClient({
+  ...
+})
+```
+
+or
+
+```
+constructor() {
+  super({ ... });
+}
+```
+
+    at module evaluation (src/lib/prisma.ts:7:3)
+    at module evaluation (src/app/api/auth/[...nextauth]/route.ts:3:1)
+   5 | export const prisma =
+   6 |   globalForPrisma.prisma ||
+>  7 |   new PrismaClient()
+     |   ^
+   8 |
+   9 | if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma
+  10 | {
+  type: 'PrismaClientInitializationError',
+  clientVersion: '7.7.0'
+}
+⨯ Error [PrismaClientKnownRequestError]:
+Invalid `{imported module ./src/lib/prisma.ts}["prisma"].house.findMany()` invocation in
+/app/.next/dev/server/chunks/ssr/[root-of-the-server]__0vl2d~5._.js:56:159
+
+  53 ;
+  54 const dynamic = 'force-dynamic';
+  55 async function Home() {
+→ 56     const houses = await {imported module ./src/lib/prisma.ts}["prisma"].house.findMany(
+URL_INVALID: The URL 'undefined' is not in a valid format
+    at <unknown> (src/app/page.tsx:7:37)
+    at async Home (src/app/page.tsx:7:18)
+   5 |
+   6 | export default async function Home() {
+>  7 |   const houses = await prisma.house.findMany({
+     |                                     ^
+   8 |     orderBy: {
+   9 |       createdAt: 'desc'
+  10 |     } {
+  code: 'URL_INVALID',
+  meta: { modelName: 'House' },
+  clientVersion: '7.7.0',
+  digest: '4087318195'
+}
+ GET / 500 in 188ms (next.js: 5ms, application-code: 184ms)
+[browser] Uncaught PrismaClientKnownRequestError:
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].house.findMany()` invocation in
+/app/.next/dev/server/chunks/ssr/[root-of-the-server]__0vl2d~5._.js:56:159
+
+  53 ;
+  54 const dynamic = 'force-dynamic';
+  55 async function Home() {
+→ 56     const houses = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].house.findMany(
+URL_INVALID: The URL 'undefined' is not in a valid format
+    at <unknown> (src/app/page.tsx:7:37)
+    at  Home (src/app/page.tsx:7:18)
+   5 |
+   6 | export default async function Home() {
+>  7 |   const houses = await prisma.house.findMany({
+     |                                     ^
+   8 |     orderBy: {
+   9 |       createdAt: 'desc'
+  10 |     }
+ GET /register 200 in 63ms (next.js: 4ms, application-code: 59ms)
+ GET /api/auth/session 200 in 167ms
+ GET /login 200 in 75ms (next.js: 3ms, application-code: 72ms)
+ POST /api/auth/_log 200 in 246ms
+ GET /api/auth/session 200 in 124ms
+⨯ Error [PrismaClientInitializationError]: `PrismaClient` needs to be constructed with a non-empty, valid `PrismaClientOptions`:
+
+```
+new PrismaClient({
+  ...
+})
+```
+
+or
+
+```
+constructor() {
+  super({ ... });
+}
+```
+
+    at module evaluation (src/lib/prisma.ts:7:3)
+    at module evaluation (src/app/api/auth/[...nextauth]/route.ts:3:1)
+   5 | export const prisma =
+   6 |   globalForPrisma.prisma ||
+>  7 |   new PrismaClient()
+     |   ^
+   8 |
+   9 | if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma
+  10 | {
+  type: 'PrismaClientInitializationError',
+  clientVersion: '7.7.0',
+  page: '/api/auth/session'
+}
+⨯ Error [PrismaClientInitializationError]: `PrismaClient` needs to be constructed with a non-empty, valid `PrismaClientOptions`:
+
+```
+new PrismaClient({
+  ...
+})
+```
+
+or
+
+```
+constructor() {
+  super({ ... });
+}
+```
+
+    at module evaluation (src/lib/prisma.ts:7:3)
+    at module evaluation (src/app/api/auth/[...nextauth]/route.ts:3:1)
+   5 | export const prisma =
+   6 |   globalForPrisma.prisma ||
+>  7 |   new PrismaClient()
+     |   ^
+   8 |
+   9 | if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma
+  10 | {
+  type: 'PrismaClientInitializationError',
+  clientVersion: '7.7.0',
+  page: '/api/auth/session'
+}
+⨯ Error [PrismaClientInitializationError]: `PrismaClient` needs to be constructed with a non-empty, valid `PrismaClientOptions`:
+
+```
+new PrismaClient({
+  ...
+})
+```
+
+or
+
+```
+constructor() {
+  super({ ... });
+}
+```
+
+    at module evaluation (src/lib/prisma.ts:7:3)
+    at module evaluation (src/app/api/auth/[...nextauth]/route.ts:3:1)
+   5 | export const prisma =
+   6 |   globalForPrisma.prisma ||
+>  7 |   new PrismaClient()
+     |   ^
+   8 |
+   9 | if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma
+  10 | {
+  type: 'PrismaClientInitializationError',
+  clientVersion: '7.7.0',
+  page: '/api/auth/session'
+}
+⨯ ./src/lib/prisma.ts:1:1
+Module not found: Can't resolve '@prisma/client'
+[31m[1m>[0m [90m1 |[0m [36mimport[0m { [33mPrismaClient[0m } [36mfrom[0m [32m'@prisma/client'[0m
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m
+  [90m3 |[0m [36mconst[0m globalForPrisma = global [36mas[0m unknown [36mas[0m { prisma: [33mPrismaClient[0m }
+  [90m4 |[0m
+
+
+
+Import trace:
+  Server Component:
+    ./src/lib/prisma.ts
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/lib/prisma.ts:1:1
+Module not found: Can't resolve '@prisma/client'
+[31m[1m>[0m [90m1 |[0m [36mimport[0m { [33mPrismaClient[0m } [36mfrom[0m [32m'@prisma/client'[0m
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m
+  [90m3 |[0m [36mconst[0m globalForPrisma = global [36mas[0m unknown [36mas[0m { prisma: [33mPrismaClient[0m }
+  [90m4 |[0m
+
+
+
+Import trace:
+  Server Component:
+    ./src/lib/prisma.ts
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+✓ Compiled in 65ms
+✓ Compiled in 19ms
+⨯ Error [PrismaClientKnownRequestError]:
+Invalid `{imported module ./src/lib/prisma.ts}["prisma"].house.findMany()` invocation in
+/app/.next/dev/server/chunks/ssr/[root-of-the-server]__0vl2d~5._.js:60:159
+
+  57 ;
+  58 const dynamic = 'force-dynamic';
+  59 async function Home() {
+→ 60     const houses = await {imported module ./src/lib/prisma.ts}["prisma"].house.findMany(
+URL_INVALID: The URL 'undefined' is not in a valid format
+    at <unknown> (src/app/page.tsx:7:37)
+    at async Home (src/app/page.tsx:7:18)
+   5 |
+   6 | export default async function Home() {
+>  7 |   const houses = await prisma.house.findMany({
+     |                                     ^
+   8 |     orderBy: {
+   9 |       createdAt: 'desc'
+  10 |     } {
+  code: 'URL_INVALID',
+  meta: { modelName: 'House' },
+  clientVersion: '7.7.0',
+  digest: '240032694'
+}
+ GET / 500 in 473ms (next.js: 105ms, application-code: 368ms)
+[browser] Uncaught PrismaClientKnownRequestError:
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].house.findMany()` invocation in
+/app/.next/dev/server/chunks/ssr/[root-of-the-server]__0vl2d~5._.js:60:159
+
+  57 ;
+  58 const dynamic = 'force-dynamic';
+  59 async function Home() {
+→ 60     const houses = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].house.findMany(
+URL_INVALID: The URL 'undefined' is not in a valid format
+    at <unknown> (src/app/page.tsx:7:37)
+    at  Home (src/app/page.tsx:7:18)
+   5 |
+   6 | export default async function Home() {
+>  7 |   const houses = await prisma.house.findMany({
+     |                                     ^
+   8 |     orderBy: {
+   9 |       createdAt: 'desc'
+  10 |     }
+ GET /register 200 in 100ms (next.js: 19ms, application-code: 81ms)
+ GET /api/auth/session 200 in 235ms
+ GET /login 200 in 86ms (next.js: 20ms, application-code: 66ms)
+ GET /api/auth/session 200 in 119ms
+ POST /api/auth/_log 200 in 254ms
+  Reload env: .env
+⨯ Error [PrismaClientKnownRequestError]:
+Invalid `{imported module ./src/lib/prisma.ts}["prisma"].house.findMany()` invocation in
+/app/.next/dev/server/chunks/ssr/[root-of-the-server]__0vl2d~5._.js:60:159
+
+  57 ;
+  58 const dynamic = 'force-dynamic';
+  59 async function Home() {
+→ 60     const houses = await {imported module ./src/lib/prisma.ts}["prisma"].house.findMany(
+URL_INVALID: The URL 'undefined' is not in a valid format
+    at <unknown> (src/app/page.tsx:7:37)
+    at async Home (src/app/page.tsx:7:18)
+   5 |
+   6 | export default async function Home() {
+>  7 |   const houses = await prisma.house.findMany({
+     |                                     ^
+   8 |     orderBy: {
+   9 |       createdAt: 'desc'
+  10 |     } {
+  code: 'URL_INVALID',
+  meta: { modelName: 'House' },
+  clientVersion: '7.7.0',
+  digest: '240032694'
+}
+ GET / 500 in 493ms (next.js: 112ms, application-code: 381ms)
+[browser] Uncaught PrismaClientKnownRequestError:
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].house.findMany()` invocation in
+/app/.next/dev/server/chunks/ssr/[root-of-the-server]__0vl2d~5._.js:60:159
+
+  57 ;
+  58 const dynamic = 'force-dynamic';
+  59 async function Home() {
+→ 60     const houses = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].house.findMany(
+URL_INVALID: The URL 'undefined' is not in a valid format
+    at <unknown> (src/app/page.tsx:7:37)
+    at  Home (src/app/page.tsx:7:18)
+   5 |
+   6 | export default async function Home() {
+>  7 |   const houses = await prisma.house.findMany({
+     |                                     ^
+   8 |     orderBy: {
+   9 |       createdAt: 'desc'
+  10 |     }
+ GET /register 200 in 105ms (next.js: 18ms, application-code: 88ms)
+ GET /api/auth/session 200 in 128ms (next.js: 103ms, application-code: 24ms)
+ GET /login 200 in 75ms (next.js: 20ms, application-code: 55ms)
+ GET /api/auth/session 200 in 15ms (next.js: 4ms, application-code: 11ms)
+[?25h
